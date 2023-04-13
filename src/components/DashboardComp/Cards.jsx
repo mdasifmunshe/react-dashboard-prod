@@ -50,9 +50,9 @@ const cards = [
 
 const Cards = () => {
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-col items-center gap-2 md:flex-row">
       {cards.map((card) => (
-        <div key={card.id} className="w-full">
+        <div key={card.id} className="w-full xs:w-[85%] md:w-full">
           <Card
             title={card.title}
             class={card.class}

@@ -31,11 +31,11 @@ const tables = [
 const Table = () => {
   return (
     <div>
-      <h2 className="mb-4 text-xl font-bold">Recent Orders</h2>
-      <table className="w-full table-auto rounded-md bg-white shadow-[0_13px_20px_0_#80808029]">
+      <h2 className="mb-4 pt-4 text-xl font-bold lg:p-0">Recent Orders</h2>
+      <table className="w-full table-auto rounded-xl bg-white shadow-[0_13px_20px_0_#80808029]">
         <thead className="h-12">
-          <tr className="text-left">
-            <th className="pl-8">Product</th>
+          <tr className="text-left text-sm sm:text-base">
+            <th className="pl-4 md:pl-8">Product</th>
             <th>Tracking ID</th>
             <th>Date</th>
             <th>Status</th>
@@ -43,12 +43,12 @@ const Table = () => {
         </thead>
         <tbody>
           {tables.map((table) => (
-            <tr key={table.id} className="h-12">
-              <td className="pl-8">{table.name}</td>
+            <tr key={table.id} className="h-12 text-sm sm:text-base">
+              <td className="pl-2 md:pl-8">{table.name}</td>
               <td>{table.trackingId}</td>
               <td>{table.date}</td>
               {/* <td>{table.status}</td> */}
-              <td>
+              <td className="pr-2 xs:pr-0">
                 <span
                   className={`${
                     table.status == "Approved"

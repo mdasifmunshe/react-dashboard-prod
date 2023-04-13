@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const sides = [
-  { id: 1, text: "Dashboard", href: "/dashboard", icon: "/dashboard.svg" },
-  { id: 2, text: "Orders", href: "/orders", icon: "/clipboard-alt.svg" },
-  { id: 3, text: "Customers", href: "/customers", icon: "/customers.svg" },
-  { id: 4, text: "Products", href: "/products", icon: "/products.svg" },
-  { id: 5, text: "Analytics", href: "/analytics", icon: "/analytics.svg" },
+  { id: 1, href: "/dashboard", icon: "/dashboard.svg" },
+  { id: 2, href: "/orders", icon: "/clipboard-alt.svg" },
+  { id: 3, href: "/customers", icon: "/customers.svg" },
+  { id: 4, href: "/products", icon: "/products.svg" },
+  { id: 5, href: "/analytics", icon: "/analytics.svg" },
 ];
 
-const Sidebar = () => {
+const SidebarSmall = () => {
   const [active, setActive] = useState(1);
 
   const handleActive = () => useEffect(() => setActive(1));
@@ -35,9 +35,6 @@ const Sidebar = () => {
             d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
           />
         </svg>
-        <p>
-          Sh<span className="text-[#ff919d]">o</span>ps
-        </p>
       </Link>
 
       {/* page links */}
@@ -53,7 +50,6 @@ const Sidebar = () => {
                 : "ml-8"
             }`}
           >
-            <img src={side.icon} alt={side.text} className="h-8 w-8" />
             <div className="text-base">{side.text}</div>
           </Link>
         ))}
@@ -62,4 +58,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarSmall;

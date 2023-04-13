@@ -24,7 +24,7 @@ const updates = [
 
 const Updates = () => {
   return (
-    <div className="flex w-[85%] flex-col gap-4 rounded-xl bg-white p-4 text-xs">
+    <div className="flex w-full flex-col gap-5 rounded-xl bg-white p-4 text-xs lg:gap-4">
       {updates.map((update) => (
         <div key={update.id} className="flex gap-2">
           <img src={update.img} alt={update.name} className="h-12 w-12" />
